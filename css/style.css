@@ -4,29 +4,62 @@
     max-width: 100vw !important;
     overflow-x: hidden !important;
   }
+}
+
+ /* body {
+    padding-left: 25px !important;
+    padding-right:25px !important;
+    margin-right: 10px !important;
+    margin-left: 10px !important;
+  }
+  
+/* Desktop max-width for main sections */
+/*@media (min-width: 577px) {
   .hero,
   .about,
   .skills,
   .work,
   .contact,
   .footer-content {
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
   }
+}
+}*/
+
+
+
+
+  /*@media (max-width: 576px) {
+  body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .hero,
+  .about,
+  .skills,
+  .work,
+  .contact,
+  .footer-content {
+    padding-left: 50px !important;
+    padding-right: 30px !important;
+  }
+    
+}
+  */
+
+
+
+@media (max-width: 576px) {
   .profile-img {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-  }
-  .engineer-intro {
-    max-width: 98vw;
+    width: 3px;
+    height: auto;
+}
+    .engineer-intro{
+        max-width: 98vw;
     padding: 6px 4px;
     font-size: 1px;
     border-radius: 10px;
@@ -40,8 +73,9 @@
     right: 25px;
     border-style: initial;
     border-radius: 100px;
-  }
+    }
 }
+  
 @media (max-width: 576px) {
   .about-container {
     flex-direction: column;
@@ -73,8 +107,6 @@
     justify-content: center;
     padding-right: 10px;
     margin-bottom: 20px;
-    position: relative;
-    top: -50px
   }
   .social-link {
     width: 48px;
@@ -91,8 +123,10 @@
     padding: 30px 5px;
   }
   .work-container {
+    
     gap: 15px;
     grid-template-columns: 1fr;
+   
   }
   .contact {
     padding: 30px 5px;
@@ -374,6 +408,8 @@ nav {
 }
 
 .logo {
+    position : relative;
+    left: 30px;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -408,6 +444,8 @@ nav {
 
 .theme-toggle {
     position: relative;
+    right: 40px;
+    margin-top: -20px;
     width: 60px;
     height: 30px;
     background-color: var(--card-bg);
@@ -501,7 +539,19 @@ nav {
     border-bottom: #121212;
     border-bottom-left-radius: 200px;
 }
-
+@media (max-width: 576px) {
+   .profile-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 200px;
+    position: relative;
+    left: 50px;
+    box-shadow: var(--shadow);
+    border-bottom: #121212;
+    display: block;
+}
+}
 .glow {
     position: absolute;
     width: 100%;
@@ -683,6 +733,8 @@ nav {
 }
 
 .social-links {
+    position : relative;
+    left: 200px;
     display: flex;
     width: auto;
     height: auto;
@@ -691,6 +743,16 @@ nav {
     align-items: center;
     text-align: center;
     padding-left: 0;
+}
+
+@media (max-width: 576px) {
+    .social-links {
+        position: relative;
+        left: 0;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
 }
 
 .social-link {
@@ -746,6 +808,12 @@ nav {
     margin-bottom: 20px;
     color: var(--primary-color);
 }
+
+/*.skill-other{
+    position: relative;
+    left: 200px;
+}*/
+
 
 .skill-item {
     margin-bottom: 20px;
@@ -810,7 +878,7 @@ nav {
 
 .work-item {
     position: relative;
-    border-radius: 100px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: var(--shadow);
     height: 250px;
@@ -829,7 +897,7 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(108, 99, 255, 0.9);
+    background-color: rgba(30, 99, 25, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -837,17 +905,21 @@ nav {
     opacity: 0;
     transition: var(--transition);
     color: white;
-    border-radius: 5000px;
 }
 
-.work-overlay h3 {
+/*.work-overlay h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
-.work-overlay p {
+/*.work-overlay p {
     margin-bottom: 20px;
-}
+}*/
+
+/*.overlay-work-broker {
+    position: relative;
+    left: 200px;
+}*/
 
 .work-link {
     width: 50px;
@@ -1261,4 +1333,8 @@ footer {
   50% { transform: rotate(-15deg); } /* Reduced from -20deg */
   100% { transform: rotate(15deg); }
 }
-
+@keyframes heart-throw {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.2); } /* Adjusted for smaller hearts */
+  100% { transform: translateY(0) scale(1); }
+}

@@ -176,10 +176,10 @@
                 });
             }
 
-            // robot//
+           // robot
 
 
-            // Keep all previous JavaScript functionality but adjust:
+           // Keep all previous JavaScript functionality but adjust:
             function createHeart() {
             // ... existing code ...
 
