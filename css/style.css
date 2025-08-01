@@ -58,22 +58,7 @@
     width: 3px;
     height: auto;
 }
-    .engineer-intro{
-        max-width: 98vw;
-    padding: 6px 4px;
-    font-size: 1px;
-    border-radius: 10px;
-    margin: 10px auto;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
-    background: linear-gradient(135deg, #232946 60%, #4d44db 100%);
-    color: #f1f5f9;
-    text-align: center;
-    display: block;
-    position: relative;
-    right: 25px;
-    border-style: initial;
-    border-radius: 100px;
-    }
+ 
 }
   
 @media (max-width: 576px) {
@@ -82,6 +67,7 @@
     gap: 20px;
     padding: 0 10px;
   }
+}
   .about-content {
     padding-left: 0;
     padding-right: 0;
@@ -96,12 +82,18 @@
     grid-template-columns: 1fr;
     padding: 20px 0;
     gap: 10px;
+}
+ @media (max-width: 576px) {
+  .about-details {
+    grid-template-columns: 2fr;
+    gap: 6px;
+    padding: 10px 10px;
+    position: static;
+    max-width: 100%;
+    right: 0;
+    margin: 0 auto;
   }
-  .detail-item {
-    flex-direction: column;
-    padding: 10px;
-    margin: 0 0 10px 0;
-  }
+}
   .social-links {
     gap: 20px;
     justify-content: center;
@@ -139,7 +131,6 @@
   .footer-content {
     padding: 0 5px;
   }
-}
 
 /* Base Styles */
 :root {
@@ -156,7 +147,11 @@
 .hamburger {
   position: relative;
   top: -5px; /* Move up */
-  right: 1px; /* Move right */
+  /*right: 1000px; /* Move right */
+}
+.hamburger{
+    position: relative;
+    right: 320px;
 }
 
 .Name-content{
@@ -238,8 +233,6 @@ body{
 .engineer-intro{
     max-width: 800px;
     margin: 40px auto;
-    padding: 20px 30px;
-    padding: 30px;
     background-color:linear-gradient(135deg, #0f172a, #1e293b);
     color: #f1f5f9;
     font-family: 'segeo UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -252,8 +245,29 @@ body{
     text-align: center;
     font-weight: 1px;
     width: 100vw;
+    border-bottom: #4d44db;
+}
 
-border-bottom: #4d44db;
+@media (max-width: 576px) {
+  .engineer-intro {
+    max-width: 88vw;
+    margin: 10px auto; /* Reduced margin */
+    padding: 10px 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    /* Softer gradient for less intense color */
+    background: linear-gradient(135deg, #232946 60%, #6c63ff 100%);
+    color: #f1f5f9;
+    text-align: center;
+    display: block;
+    position: relative;
+    right: 0;
+    border-style: initial;
+    border-radius: 16px;
+    position: relative;
+    right: 25px
+  }
 }
 
 .engineer-intro:hover{
@@ -293,6 +307,18 @@ img {
     transition: var(--transition);
     border: none;
     cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .btn-primary, .btn-secondary {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 14px;
+    }
+
+    .btn-primary, .btn-secondary:hover{
+        background-color: rgba(30, 99, 25, 0.9);
+    }
 }
 
 .btn-primary {
@@ -409,7 +435,7 @@ nav {
 
 .logo {
     position : relative;
-    left: 30px;
+    left: 130px;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary-color);
@@ -444,7 +470,7 @@ nav {
 
 .theme-toggle {
     position: relative;
-    right: 40px;
+    left: 100px;
     margin-top: -20px;
     width: 60px;
     height: 30px;
@@ -595,6 +621,23 @@ nav {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+@media (max-width: 576px) {
+  .hero-description {
+    background: linear-gradient(135deg, #6c63ff 10%, #232946 100%);
+    color: #fff;
+    padding: 7px 20px;
+    border-radius: 200px;
+    box-shadow: 0 4px 18px rgba(76, 99, 255, 0.15);
+    font-size: 0.7rem;
+    margin: 50px 10px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    line-height: 1.5;
+    border: 1.5px solid #1f14c0;
+    transition: background 0.3s, color 0.3s;
+  }
 }
 
 .hero-description {
